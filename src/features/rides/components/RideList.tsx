@@ -18,15 +18,17 @@ export function RideList({ rides, onRemove }: RideListProps) {
 		<article aria-label="記録一覧">
 			<h1>運動記録</h1>
 			<h2>記録一覧 {rides.length}件</h2>
-			<button onClick={() => setNewestFist((value) => !value)}>
+			<button type="button" onClick={() => setNewestFist((value) => !value)}>
 				{newestFirst ? "古い順にする" : "新しい順にする"}
 			</button>
-			{rides.length == 0 && <p>記録がありません</p>}
+			{rides.length === 0 && <p>記録がありません</p>}
 			<ol>
 				{sorted.map((ride) => (
 					<li key={ride.id}>
 						<RideCard ride={ride} />
-						<button onClick={() => onRemove(ride.id)}>削除</button>
+						<button type="button" onClick={() => onRemove(ride.id)}>
+							削除
+						</button>
 					</li>
 				))}
 			</ol>

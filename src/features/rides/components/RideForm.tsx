@@ -24,7 +24,7 @@ export function RideForm({ onAdd }: RideFormProps) {
 			return;
 		}
 		console.log("mters ", meters);
-		let ride: Ride = {
+		const ride: Ride = {
 			id: crypto.randomUUID(),
 			date: date,
 			distanceM: meters,

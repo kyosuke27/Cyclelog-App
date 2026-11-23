@@ -23,7 +23,7 @@ function App() {
 	const [rides, setRides] = useState<Ride[]>(rides2);
 
 	function removeRide(id: string) {
-		setRides((pre) => pre.filter((r) => r.id != id));
+		setRides((pre) => pre.filter((r) => r.id !== id));
 	}
 	function addRides(ride: Ride) {
 		setRides([...rides, ride]);

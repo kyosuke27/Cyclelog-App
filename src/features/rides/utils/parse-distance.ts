@@ -1,6 +1,6 @@
 export function parseDistance(inputRaw: string): number {
 	const value = inputRaw.trim();
-	if (value == "") throw new Error("距離を入力");
+	if (value === "") throw new Error("距離を入力");
 	if (!/^(?:\d+(?:\.\d{0,3})?|\.\d{1,3})$/.test(value)) {
 		throw new Error("入力値は少数第三位までの正の数で入力");
 	}

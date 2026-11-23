@@ -7,5 +7,5 @@ export function totalDistance(rides: Ride[]): number {
 
 // 月でridesの中から検索
 export function monthly(rides: Ride[], month: string): Ride[] {
-	return rides.filter((ride) => ride.date.startsWith(month + "-"));
+	return rides.filter((ride) => ride.date.startsWith(`${month} -`));
 }
