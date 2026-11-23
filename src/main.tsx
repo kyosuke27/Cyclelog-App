@@ -5,11 +5,11 @@ import App from "./App.tsx";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
-  throw new Error("id=rootが見つからない");
+	throw new Error("id=rootが見つからない");
 }
 
 createRoot(rootElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+	<StrictMode>
+		<App />
+	</StrictMode>,
 );
